@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Urquhart's Snow Removal Ltd.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Urquhart's Snow Removal Ltd.</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about_us.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="request_a_quote.html">Request a quote</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact_us.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>Welcome to Urquhart's Snow Removal Ltd.</h1>
+          <p>
+            Welcome to Urquhart's Snow Removal Ltd, the premier provider of
+            residential and commercial snow removal services in Moncton and the
+            surrounding areas. With over 20 years of experience in the industry,
+            we have established ourselves as the go-to source for reliable,
+            efficient, and affordable snow removal services. Our team of
+            experienced professionals is dedicated to ensuring your safety and
+            satisfaction, no matter how challenging the conditions may be.
+            Whether you need your driveway cleared or your entire parking lot
+            plowed, we've got you covered. Contact us today to learn more about
+            our services and to schedule your snow removal appointment.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <div class="carousel">
+            <div class="slides">
+              <img src="media/IMG_1035.jpg" alt="Image 1" />
+              <img src="media/IMG_1091.jpg" alt="Image 2" />
+              <img src="media/IMG_1244.jpg" alt="Image 3" />
+              <img src="media/IMG_1394.jpg" alt="Image 4" />
+              <img src="media/IMG_1396.jpg" alt="Image 5" />
+              <img src="media/IMUH3421.jpg" alt="Image 6" />
+              <img src="media/MVCF1504.jpg" alt="Image 7" />
+              <img src="media/OXCN0250.jpg" alt="Image 8" />
+              <img src="media/QOTS4236.jpg" alt="Image 9" />
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="bg-dark text-light py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p>&copy; 2023 Urquhart's Snow Removal Ltd. All Rights Reserved.</p>
+          </div>
+          <div class="col-md-6 text-right">
+            <p>
+              <a href="privacy_policy.html">Privacy Policy</a> |
+              <a href="tos.html">Terms of Service</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/"></script>
+    <script>
+      const carousel = document.querySelector(".carousel");
+      const slides = carousel.querySelector(".slides");
+      const images = slides.querySelectorAll("img");
+      const prevButton = carousel.querySelector(".prev");
+      const nextButton = carousel.querySelector(".next");
+      let currentSlide = 0;
+
+      function showSlide(index) {
+        slides.style.transform = `translateX(-${index * 100}%)`;
+      }
+
+      function handlePrev() {
+        currentSlide = currentSlide > 0 ? currentSlide - 1 : images.length - 1;
+        showSlide(currentSlide);
+      }
+
+      function handleNext() {
+        currentSlide = currentSlide < images.length - 1 ? currentSlide + 1 : 0;
+        showSlide(currentSlide);
+      }
+
+      prevButton.addEventListener("click", handlePrev);
+      nextButton.addEventListener("click", handleNext);
+
+      showSlide(currentSlide);
+    </script>
+  </body>
+</html>

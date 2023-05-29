@@ -1,0 +1,7 @@
+Home page: This would be the first page users see when they visit the website. It should feature the company name and logo prominently, as well as a clear call to action for users to request a contract or contact the workers. The page could also include some brief information about the company's services and a few positive customer reviews.
+
+About us page: This page would provide more detailed information about the company's history, values, and team members. It could include a few photos of the team and some information about their qualifications and experience.
+
+Services page: This page would list the company's various snow removal services, along with pricing information and any special promotions or discounts. It could also include some customer testimonials to help users make informed decisions.
+
+Contact us page: This page would provide users with multiple ways to get in touch with the company, such as a contact form, phone number, email address, and physical address. It could also include a map showing the company's service area.
